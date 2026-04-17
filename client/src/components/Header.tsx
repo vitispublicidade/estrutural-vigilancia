@@ -26,7 +26,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img 
-            src="/manus-storage/logo_BM_3734c757.jpg" 
+            src="/manus-storage/logo_BM_transparent_9dc0080a.png" 
             alt="BM Serviços Logo" 
             className="h-12 w-auto"
           />
