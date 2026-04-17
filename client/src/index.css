@@ -119,6 +119,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -162,13 +163,31 @@
     }
   }
 
+  /* Tipografia refinada */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  /* Padrão geométrico sutil */
+  .geometric-pattern {
+    background-image: 
+      linear-gradient(135deg, transparent 24%, rgba(212, 175, 55, 0.03) 25%, rgba(212, 175, 55, 0.03) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.03) 75%, rgba(212, 175, 55, 0.03) 76%, transparent 77%, transparent),
+      linear-gradient(45deg, transparent 24%, rgba(212, 175, 55, 0.03) 25%, rgba(212, 175, 55, 0.03) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.03) 75%, rgba(212, 175, 55, 0.03) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+  }
+
   /* Custom components for Estrutural Vigilância */
   .badge-accent {
-    @apply inline-block px-4 py-2 bg-accent/10 border border-accent/30 rounded text-accent text-sm font-semibold tracking-wider;
+    @apply inline-block px-4 py-2 bg-accent/10 border border-accent/30 rounded text-accent text-xs font-bold tracking-widest uppercase;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-bold text-white;
+    @apply text-5xl md:text-6xl font-bold text-white leading-tight;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: -1px;
   }
 
   .section-title-accent {
@@ -176,18 +195,121 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-accent text-accent-foreground font-bold rounded hover:bg-accent/90 transition-all duration-300 border-2 border-accent hover:shadow-lg hover:shadow-accent/50;
+    @apply px-6 py-3 bg-accent text-accent-foreground font-bold rounded transition-all duration-300 border-2 border-accent;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    @apply bg-accent/90 shadow-lg;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-accent text-accent rounded hover:bg-accent/10 transition-all duration-300 font-semibold;
+    @apply px-6 py-3 border-2 border-accent text-accent rounded transition-all duration-300 font-semibold;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .btn-outline:hover {
+    @apply bg-accent/10;
   }
 
   .service-card {
-    @apply bg-card border border-border rounded-lg p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20;
+    @apply bg-card border border-border rounded-lg p-8 transition-all duration-300;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .service-card:hover {
+    @apply border-accent/50 shadow-lg;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
   }
 
   .client-card {
-    @apply bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[120px] hover:border-accent/50 transition-all duration-300;
+    @apply bg-card border border-border rounded-lg p-6 flex items-center justify-center min-h-[120px] transition-all duration-300;
+    position: relative;
+  }
+
+  .client-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--accent), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .client-card:hover {
+    @apply border-accent/50;
+  }
+
+  .client-card:hover::after {
+    opacity: 1;
+  }
+
+  /* Floating card effect */
+  .floating-card {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent), #F5D547);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
