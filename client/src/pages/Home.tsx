@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ImageSlider from "@/components/ImageSlider";
 import { Shield, User, Camera, Lock, Mail, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -58,6 +59,13 @@ export default function Home() {
     "Concrejato",
   ];
 
+  const sliderImages = [
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/hero-security-bg-CPWUJ98iKemot6wQTNy7Zp.webp",
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/armed-security-T9VyniE7ZrREYuJKxAZZcg.webp",
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/surveillance-tech-48r4ocsrQGGoT7ovoRNyKf.webp",
+    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/building-protection-QDLe72AyMaYafLg9pSkinB.webp",
+  ];
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -114,6 +122,19 @@ export default function Home() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Image Slider Section */}
+      <section id="galeria" className="py-20 bg-card/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="badge-accent mb-6 w-fit mx-auto">GALERIA</div>
+            <h2 className="section-title">
+              Nossos <span className="section-title-accent">Projetos</span>
+            </h2>
+          </div>
+          <ImageSlider images={sliderImages} autoPlay={true} interval={6000} />
         </div>
       </section>
 
@@ -266,12 +287,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12 geometric-pattern">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center gap-4 text-center">
-            <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-              <span className="font-bold text-accent-foreground text-lg" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-                EV
-              </span>
-            </div>
+          <div className="flex flex-col items-center justify-center gap-6 text-center">
+            <img 
+              src="/manus-storage/logo_BM_3734c757.jpg" 
+              alt="BM Serviços Logo" 
+              className="h-16 w-auto"
+            />
             <p className="text-gray-400 text-sm font-light">
               © 2026 Estrutural Vigilância e Segurança Ltda. Todos os direitos reservados.
             </p>
