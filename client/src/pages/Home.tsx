@@ -128,12 +128,6 @@ export default function Home() {
       {/* Image Slider Section */}
       <section id="galeria" className="py-20 bg-card/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="badge-accent mb-6 w-fit mx-auto">GALERIA</div>
-            <h2 className="section-title">
-              Nossos <span className="section-title-accent">Projetos</span>
-            </h2>
-          </div>
           <ImageSlider images={sliderImages} autoPlay={true} interval={6000} />
         </div>
       </section>
@@ -289,7 +283,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center gap-6 text-center">
             <img 
-              src="/manus-storage/logo_BM_transparent_9dc0080a.png" 
+              src="https://cdn.jsdelivr.net/gh/figma/logo@main/logo.svg" 
               alt="BM Serviços Logo" 
               className="h-16 w-auto"
             />
