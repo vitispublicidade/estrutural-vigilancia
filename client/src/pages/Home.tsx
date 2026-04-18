@@ -60,10 +60,10 @@ export default function Home() {
   ];
 
   const sliderImages = [
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/hero-security-bg-CPWUJ98iKemot6wQTNy7Zp.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/armed-security-T9VyniE7ZrREYuJKxAZZcg.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/surveillance-tech-48r4ocsrQGGoT7ovoRNyKf.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663417193336/nxKAdFuktNtukLvvKxofYW/building-protection-QDLe72AyMaYafLg9pSkinB.webp",
+    "/manus-storage/ESTRUTURAL-1002_0fffa30f.jpg",
+    "/manus-storage/ESTRUTURAL-1003_fd4d9fbf.jpg",
+    "/manus-storage/ESTRUTURAL-1004_031fa69b.jpg",
+    "/manus-storage/ESTRUTURAL-1008_93bbcb41.jpg",
   ];
 
   const scrollToSection = (id: string) => {
@@ -279,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 geometric-pattern">
+      <footer className="bg-white border-t border-gray-200 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center gap-6 text-center">
             <img 
@@ -287,10 +287,10 @@ export default function Home() {
               alt="BM Serviços Logo" 
               className="h-16 w-auto"
             />
-            <p className="text-gray-400 text-sm font-light">
+            <p className="text-gray-700 text-sm font-light">
               © 2026 Estrutural Vigilância e Segurança Ltda. Todos os direitos reservados.
             </p>
-            <p className="text-gray-500 text-xs font-light">
+            <p className="text-gray-600 text-xs font-light">
               Mais de 35 anos protegendo o que realmente importa.
             </p>
           </div>
