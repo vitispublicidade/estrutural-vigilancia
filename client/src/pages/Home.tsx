@@ -283,7 +283,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center gap-6 text-center">
             <img 
-              src="/manus-storage/BM_blue_no_border_b1e8ba87.png" 
+              src="/manus-storage/BM_blue_clean_2c4b9d22.png" 
               alt="BM Serviços Logo" 
               className="h-16 w-auto"
             />
