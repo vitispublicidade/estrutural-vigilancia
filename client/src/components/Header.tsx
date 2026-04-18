@@ -26,7 +26,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img 
-            src="https://cdn.jsdelivr.net/gh/figma/logo@main/logo.svg" 
+            src="/manus-storage/logo_BM_7aebeb78.png" 
             alt="BM Serviços Logo" 
             className="h-12 w-auto"
           />

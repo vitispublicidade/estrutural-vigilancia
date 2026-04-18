@@ -283,7 +283,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center gap-6 text-center">
             <img 
-              src="https://cdn.jsdelivr.net/gh/figma/logo@main/logo.svg" 
+              src="/manus-storage/logo_BM_7aebeb78.png" 
               alt="BM Serviços Logo" 
               className="h-16 w-auto"
             />
