@@ -10,12 +10,16 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
-  const staticPath =
-    process.env.NODE_ENV === "production"
-      ? path.resolve(__dirname, "public")
-      : path.resolve(__dirname, "..", "dist", "public");
+  // Determine the correct path for static files
+  const isProduction = process.env.NODE_ENV === "production";
+  
+  // In production (Vercel), files are in dist/
+  // In development, files are in dist/
+  const staticPath = isProduction 
+    ? path.resolve(__dirname, "..", "dist")
+    : path.resolve(__dirname, "..", "dist");
 
+  // Serve static files
   app.use(express.static(staticPath));
 
   // Handle client-side routing - serve index.html for all routes
